@@ -1,0 +1,115 @@
+[2022-12-08 23:46:37][INFO][autoreload.py:677:run_with_reloader]：Watching for file changes with StatReloader
+[2022-12-08 23:46:43][INFO][basehttp.py:187:log_message]："POST /api/v1/login HTTP/1.1" 200 271
+[2022-12-08 23:47:52][INFO][autoreload.py:266:trigger_reload]：/Users/sommuni/PycharmProjects/jiangtao_backend/dtoken/views.py changed, reloading.
+[2022-12-08 23:47:52][INFO][autoreload.py:677:run_with_reloader]：Watching for file changes with StatReloader
+[2022-12-08 23:47:54][INFO][basehttp.py:187:log_message]："POST /api/v1/login HTTP/1.1" 200 269
+[2022-12-08 23:49:55][INFO][autoreload.py:677:run_with_reloader]：Watching for file changes with StatReloader
+[2022-12-08 23:50:06][INFO][basehttp.py:187:log_message]："POST /api/v1/register/send_code HTTP/1.1" 200 86
+[2022-12-08 23:50:42][INFO][basehttp.py:187:log_message]："POST /api/v1/register HTTP/1.1" 200 82
+[2022-12-08 23:50:58][INFO][basehttp.py:187:log_message]："POST /api/v1/register HTTP/1.1" 200 229
+[2022-12-08 23:52:10][INFO][basehttp.py:187:log_message]："POST /api/v1/login HTTP/1.1" 200 251
+[2022-12-08 23:52:57][INFO][autoreload.py:677:run_with_reloader]：Watching for file changes with StatReloader
+[2022-12-08 23:53:05][INFO][basehttp.py:187:log_message]："POST /api/v1/login HTTP/1.1" 200 142
+[2022-12-08 23:54:33][INFO][autoreload.py:266:trigger_reload]：/Users/sommuni/PycharmProjects/jiangtao_backend/server/views.py changed, reloading.
+[2022-12-08 23:54:33][INFO][autoreload.py:677:run_with_reloader]：Watching for file changes with StatReloader
+[2022-12-08 23:55:03][INFO][basehttp.py:187:log_message]："POST /api/v1/login HTTP/1.1" 200 142
+[2022-12-08 23:57:20][INFO][autoreload.py:266:trigger_reload]：/Users/sommuni/PycharmProjects/jiangtao_backend/jiangtao_backend/settings.py changed, reloading.
+[2022-12-09 00:00:04][INFO][autoreload.py:677:run_with_reloader]：Watching for file changes with StatReloader
+[2022-12-09 00:00:19][INFO][basehttp.py:187:log_message]："POST /api/v1/login HTTP/1.1" 200 142
+[2022-12-09 11:05:19][INFO][basehttp.py:187:log_message]："POST /api/v1/register/send_code HTTP/1.1" 200 86
+[2022-12-09 11:05:20][ERROR][log.py:241:log_response]：Internal Server Error: /api/v1/register
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pymysql/connections.py", line 613, in connect
+    sock = socket.create_connection(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socket.py", line 844, in create_connection
+    raise err
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socket.py", line 832, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 282, in ensure_connection
+    self.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 263, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 247, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pymysql/connections.py", line 353, in __init__
+    self.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pymysql/connections.py", line 664, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 61] Connection refused)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/sommuni/PycharmProjects/jiangtao_backend/server/views.py", line 111, in post
+    elif UserProflie.objects.filter(username=username):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 408, in __bool__
+    self._fetch_all()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1396, in execute_sql
+    cursor = self.connection.cursor()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 323, in cursor
+    return self._cursor()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 299, in _cursor
+    self.ensure_connection()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 282, in ensure_connection
+    self.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 282, in ensure_connection
+    self.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/db/backends/base/base.py", line 263, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 247, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pymysql/connections.py", line 353, in __init__
+    self.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pymysql/connections.py", line 664, in connect
+    raise exc
+django.db.utils.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 61] Connection refused)")
+[2022-12-09 11:05:20][ERROR][basehttp.py:187:log_message]："POST /api/v1/register HTTP/1.1" 500 218287
+[2022-12-09 11:05:20][INFO][basehttp.py:187:log_message]："POST /api/v1/login HTTP/1.1" 200 151
+[2022-12-09 11:06:34][INFO][basehttp.py:187:log_message]："POST /api/v1/register/send_code HTTP/1.1" 200 86
+[2022-12-09 11:06:34][INFO][basehttp.py:187:log_message]："POST /api/v1/register HTTP/1.1" 200 139
+[2022-12-09 11:06:34][INFO][basehttp.py:187:log_message]："POST /api/v1/login HTTP/1.1" 200 271
+[2022-12-09 11:09:06][INFO][basehttp.py:187:log_message]："POST /api/v1/register/send_code HTTP/1.1" 200 86
+[2022-12-09 11:09:06][INFO][basehttp.py:187:log_message]："POST /api/v1/register HTTP/1.1" 200 139
+[2022-12-09 11:09:06][INFO][basehttp.py:187:log_message]："POST /api/v1/login HTTP/1.1" 200 269
+[2022-12-09 11:28:17][INFO][basehttp.py:187:log_message]："POST /api/v1/login HTTP/1.1" 200 142
+[2022-12-09 11:31:11][INFO][basehttp.py:187:log_message]："POST /api/v1/login HTTP/1.1" 200 142
+[2022-12-09 11:34:34][INFO][basehttp.py:187:log_message]："POST /api/v1/login HTTP/1.1" 200 142
+[2022-12-09 11:34:58][INFO][basehttp.py:187:log_message]："POST /api/v1/login HTTP/1.1" 200 142
+[2022-12-09 11:35:11][INFO][basehttp.py:187:log_message]："POST /api/v1/login HTTP/1.1" 200 142
+[2022-12-09 11:36:25][INFO][basehttp.py:187:log_message]："POST /api/v1/login HTTP/1.1" 200 252
+[2022-12-09 11:36:30][INFO][basehttp.py:187:log_message]："POST /api/v1/login HTTP/1.1" 200 142
+[2022-12-09 11:43:19][INFO][basehttp.py:187:log_message]："POST /api/v1/login HTTP/1.1" 200 142
+[2022-12-09 11:45:36][INFO][basehttp.py:187:log_message]："POST /api/v1/login HTTP/1.1" 200 142
+[2022-12-09 11:45:57][INFO][basehttp.py:187:log_message]："POST /api/v1/login HTTP/1.1" 200 142
+[2022-12-09 11:49:10][INFO][basehttp.py:187:log_message]："POST /api/v1/login HTTP/1.1" 200 142
